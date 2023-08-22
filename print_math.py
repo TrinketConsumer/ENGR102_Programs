@@ -13,4 +13,4 @@ p = ((5*8.314*415)/.27)/1000
 print("Force is", f, "N")
 print("Wavelength is", w, "nm")
 print("Radon-222 left is", r, "g")
-print("Pressure is", p, "kPA")
+print("Pressure is", p, "kPa")
