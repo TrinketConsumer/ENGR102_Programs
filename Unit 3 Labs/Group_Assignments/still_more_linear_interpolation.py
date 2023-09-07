@@ -12,6 +12,7 @@
 
 from math import *
 
+#Inputs
 t1 = float(input("Enter time 1: "))
 x1 = float(input("Enter the x position of the object at time 1: "))
 y1 = float(input("Enter the y position of the object at time 1: "))
@@ -30,22 +31,24 @@ x_interpolation = xslope * (t3-t1) + x1
 y_interpolation = yslope * (t3-t1) + y1
 z_interpolation = zslope * (t3-t1) + z1
 print(f"At time {t3:.2f} seconds the object is at ({x_interpolation:.3f}, {y_interpolation:.3f}, {z_interpolation:.3f})")
-t3 = t1 + t2 * (1/8)
+'''t3 is redefined before calculating the new inteerpolation everytime. The new definition splits 
+the final time subtracted from the beginning time in 4, multiplies the result by the number of times the code has already been run, and then adds the original time back in'''
+t3 = ((t2 - t1) / 4) + t1
 x_interpolation = xslope * (t3-t1) + x1
 y_interpolation = yslope * (t3-t1) + y1
 z_interpolation = zslope * (t3-t1) + z1
 print(f"At time {t3:.2f} seconds the object is at ({x_interpolation:.3f}, {y_interpolation:.3f}, {z_interpolation:.3f})")
-t3 = t1 + t2 * (2/8)
+t3 = (((t2 - t1) / 4) * 2) + t1
 x_interpolation = xslope * (t3-t1) + x1
 y_interpolation = yslope * (t3-t1) + y1
 z_interpolation = zslope * (t3-t1) + z1
 print(f"At time {t3:.2f} seconds the object is at ({x_interpolation:.3f}, {y_interpolation:.3f}, {z_interpolation:.3f})")
-t3 = t1 + t2 * (3/8)
+t3 = (((t2 - t1) / 4) * 3) + t1
 x_interpolation = xslope * (t3-t1) + x1
 y_interpolation = yslope * (t3-t1) + y1
 z_interpolation = zslope * (t3-t1) + z1
 print(f"At time {t3:.2f} seconds the object is at ({x_interpolation:.3f}, {y_interpolation:.3f}, {z_interpolation:.3f})")
-t3 = t1 + t2 * (4/8)
+t3 = t2 
 x_interpolation = xslope * (t3-t1) + x1
 y_interpolation = yslope * (t3-t1) + y1
 z_interpolation = zslope * (t3-t1) + z1
