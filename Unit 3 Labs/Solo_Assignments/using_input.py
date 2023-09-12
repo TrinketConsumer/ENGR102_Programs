@@ -35,6 +35,3 @@ volume = float(input("Please enter the volume (m^3): "))
 temp = float(input("Please enter the temperature (K): "))
 p = ((moles*8.314*temp)/volume)/1000
 print(f"Pressure is {p:.0f} kPa")
-
-#Printing
-
