@@ -31,24 +31,24 @@ if A != 0:
 if B != 0:
     if B > 1:
         if A == 0:
-            print(f'{B}x',end = (' '))
+            print(f'{B}x', end = (' '))
         elif A != 0:
-            print(f'+ {B}x',end = (' '))
+            print(f'+ {B}x', end = (' '))
     elif B == -1:
-        print('- x',end = (' '))
+        print('- x', end = (' '))
     elif B < 1:
-        print(f'- {abs(B)}x',end = (' '))
+        print(f'- {abs(B)}x', end = (' '))
     elif B == 1:
         if not A == 0:
-            print('+ x',end = (' '))
+            print('+ x', end = (' '))
         elif A == 0:
-            print('x',end = (' '))
+            print('x', end = (' '))
     elif B == -1:
-        print('- x',end = (' '))
+        print('- x', end = (' '))
 
 if C != 0:
     if C >= 1:
-        print(f'+ {C}',end = (' '))
+        print(f'+ {C}', end = (' '))
     elif C <= 1:
         print(f'- {abs(C)}', end = (' '))
 
