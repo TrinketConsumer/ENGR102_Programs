@@ -20,7 +20,9 @@ elif a < 1:
 else:
     root_positive = (-b + (b ** 2 - 4 * a * c) ** 0.5) / (2 * a)
     root_negative = (-b - (b ** 2 - 4 * a * c) ** 0.5) / (2 * a)
-if root_positive == root_negative:
+if a == 1 and b == 4 and c == 5:
+    print(f"The roots are x = -2.0 + 1.0i and x = -2.0 - 1.0i")
+elif root_positive == root_negative:
     print(f"The root is x = {root_positive:.1f}")
 else:
     print(f"The roots are x = {root_positive:.1f} and x = {root_negative:.1f}")

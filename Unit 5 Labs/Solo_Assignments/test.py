@@ -1,19 +1,16 @@
-from math import *
-from tkinter import Tk
-while True:
-    r = Tk()
-    r.withdraw()
+import time
+from random import *
+f = open("tyr_test_cases.py", "w")
+for i in range(0,250):
+    trinket = 0
     risk = 0
-    sex = input("sex")
-    if sex == "stop":
-        break
-    age = int(input("age"))
-    cho = int(input("cho"))
-    smo = input("smo")
-    hdl = int(input("hdl"))
-    sbp = int(input("sbp"))
-    med = input("med")
-
+    sex = choice(["M", "F"])
+    age = randint(20,79)
+    cho = randint(159,281)
+    smo = choice(["Y", "N"])
+    hdl = randint(39,61)
+    sbp = randint(119,160)
+    med = choice(["T", "F"])
     if sex == "F":
         if age <= 34:
             risk += -7
@@ -186,41 +183,41 @@ while True:
             elif sbp >= 160:
                 risk += 4
         if risk < 9:
-            r.clipboard_append("<1")
+            out =("<1")
         elif risk == 9:
-            r.clipboard_append("1")
+            out =("1")
         elif risk == 10:
-            r.clipboard_append("1")
+            out =("1")
         elif risk == 11:
-            r.clipboard_append ("1")
+            out = ("1")
         elif risk == 12:
-            r.clipboard_append("1")
+            out =("1")
         elif risk == 13:
-            r.clipboard_append("2")
+            out =("2")
         elif risk == 14:
-            r.clipboard_append("2")
+            out =("2")
         elif risk == 15:
-            r.clipboard_append ("3")
+            out = ("3")
         elif risk == 16:
-            r.clipboard_append("4")
+            out =("4")
         elif risk == 17:
-            r.clipboard_append("5")
+            out =("5")
         elif risk == 18:
-            r.clipboard_append("6")
+            out =("6")
         elif risk == 19:
-            r.clipboard_append("8")
+            out =("8")
         elif risk == 20:
-            r.clipboard_append("11")
+            out =("11")
         elif risk == 21:
-            r.clipboard_append("14")
+            out =("14")
         elif risk == 22:
-            r.clipboard_append("17")
+            out =("17")
         elif risk == 23:
-            r.clipboard_append("22")
+            out =("22")
         elif risk == 24:
-            r.clipboard_append("27")
+            out =("27")
         elif risk >= 25:
-            r.clipboard_append(">=30")
+            out =(">=30")
     if sex == "M":
         if age <= 34:
             risk += -9
@@ -393,40 +390,43 @@ while True:
             elif sbp >= 160:
                 risk += 2
         if risk < 0:
-            r.clipboard_append("<1")
+            out =("<1")
         elif risk == 0:
-            r.clipboard_append("1")
+            out =("1")
         elif risk == 1:
-            r.clipboard_append("1")
+            out =("1")
         elif risk == 2:
-            r.clipboard_append ("1")
+            out = ("1")
         elif risk == 3:
-            r.clipboard_append("1")
+            out =("1")
         elif risk == 4:
-            r.clipboard_append("1")
+            out =("1")
         elif risk == 5:
-            r.clipboard_append("2")
+            out =("2")
         elif risk == 6:
-            r.clipboard_append ("2")
+            out = ("2")
         elif risk == 7:
-            r.clipboard_append("3")
+            out =("3")
         elif risk == 8:
-            r.clipboard_append("4")
+            out =("4")
         elif risk == 9:
-            r.clipboard_append("5")
+            out =("5")
         elif risk == 10:
-            r.clipboard_append("6")
+            out =("6")
         elif risk == 11:
-            r.clipboard_append("8")
+            out =("8")
         elif risk == 12:
-            r.clipboard_append("10")
+            out =("10")
         elif risk == 13:
-            r.clipboard_append("12")
+            out =("12")
         elif risk == 14:
-            r.clipboard_append("16")
+            out =("16")
         elif risk == 15:
-            r.clipboard_append("20")
+            out =("20")
         elif risk == 16:
-            r.clipboard_append("25")
+            out =("25")
         elif risk >= 17:
-            r.clipboard_append(">=30")
+            out =(">=30")
+    trinket = "sex:" + str(sex) + " age:" + str(age) + " cho:" + str(cho) + " smo:" + str(smo) + " hdl:" + str(hdl) + " sbp:" + str(sbp) + " med:" + str(med) + " out:" + out 
+    f.write(trinket)
+    f.write("\n")
