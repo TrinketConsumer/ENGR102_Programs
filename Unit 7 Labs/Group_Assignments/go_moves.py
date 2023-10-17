@@ -9,18 +9,6 @@
 # Assignment: Lab 6.11
 # Date: 3 October 2023
 
-
-#Create 9 lists within a main list to contain the 9x9 board using nested for loops
-#Check each element of each list on the inside; if it's 0 print a ., 1 print a o, 2 print a O
-#. is blank space, o is white tile, O is black tile
-#Black goes first
-#Print the board
-#Recieve input from the user in the format (x, y) for where they want to place a stone
-#Check if the element those coordinates target is a 0, if not, tell the user to try again and recieve input once again
-#If it is 0, change it to 2 if black made the move and change it to 1 if white made the move.
-#Print the board again and allow white to move
-#Repeat this until "stop" is entered
-
 board = []
 for i in range(9):
     temp_list = []
