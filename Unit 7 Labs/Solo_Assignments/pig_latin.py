@@ -7,14 +7,25 @@
 # Assignment: Lab 6.16
 # Date: 2 October 2023
 
-vowels = ['a', 'e', 'i', 'o', 'u']
+#super trinket time
+vowels = ['a', 'e', 'i', 'o', 'u', 'y']
 pig = input("Enter word(s) to convert to Pig Latin: ")
 x = pig.split()
+characters = []
+counter = 0
+new = ''
 for i in x:
     for j in i:
-        characters = []
-        characters.append(j)
-        if i.find(vowels) >= 0:
-            print("trinkets")
-        else:
-            print("no trinkets")
+        if j in vowels:
+            new += str(i) + 'yay' + ' '
+            break
+        elif str(i)[1] in vowels:
+            new += str(i)[1:] + str(j) + 'ay' + ' '
+            break
+        elif str(i)[2] in vowels:
+            new += str(i)[2:] + str(j) + str(i)[1] + 'ay' + ' '
+            break
+print(f'In Pig Latin, "{pig}" is : {new}')
+        
+
+        
