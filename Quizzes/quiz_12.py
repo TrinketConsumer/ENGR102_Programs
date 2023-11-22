@@ -31,8 +31,8 @@ value_five = np.max(f)
 print(alpha[value_five])
 print()
 message = 'zilhpzsyucavkzbf'
-message2 = 'wfkjphaillnwoisu'
-for i in message2:
+message2 = 'lbclllsnllnwoisu'
+for i in message:
     num = alpha.index(i)
     counter += 1
     if counter == 1:
