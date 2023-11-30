@@ -14,12 +14,22 @@ import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
 
-x = np.linspace(-2.0,2.0)
-y1 = (1/8) * (x**2)
-y2 = (1/24) * (x**2)
-plt.plot(x,y1,'r')
-plt.plot(-x,y1,'r')
-plt.plot(x,y2,'r')
-plt.plot(-x,y2,'r')
-plt.xlim(-2.0,2)
-plt.show()
+t = np.arange(0.01, 20.0, 0.001) 
+data1 = np.exp(t) 
+data2 = np.sin(0.3 * np.pi * t) 
+   
+fig, ax1 = plt.subplots() 
+   
+color = 'tab:blue'
+ax1.set_xlabel('time (s)') 
+ax1.set_ylabel('exp', color = color) 
+ax1.plot(t, data1, color = color) 
+ax1.tick_params(axis ='y', labelcolor = color) 
+
+ax2 = ax1.twinx() 
+   
+color = 'tab:green'
+ax2.set_ylabel('sin', color = color) 
+ax2.plot(t, data2, color = color) 
+ax2.tick_params(axis ='y', labelcolor = color) 
+plt.show() 

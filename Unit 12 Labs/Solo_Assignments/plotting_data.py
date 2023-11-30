@@ -4,10 +4,11 @@
 #
 # Names: Ryan Mathews
 # Section: 580
-# Assignment: Lab 11.13
+# Assignment: Lab 12.15
 # Date: 14 November 2023
-
-#buh
+import numpy as np
+import matplotlib as mlp
+import matplotlib.pyplot as plt
 weather = open('WeatherDataCLL.csv', 'r')
 
 head_line = weather.readline()
@@ -66,10 +67,11 @@ for date in weather_dates:
 def average(variable):
     return sum(variable) / len(variable)
 
-print(f'For {month} {year}:')
-print(f'Mean average daily temperature: {round(average(avg_temps), 1)} F')
-print(f'Mean relative humidity: {round(average(mean_humids), 1)}%')
-print(f'Mean daily wind speed: {round(average(mean_winds), 2): .2f} mph')
-print(f'Percentage of days with precipitation: {round(((len(precip_yes) / len(precip_tot)) * 100), 1)}%')
-    
+# print(f'For {month} {year}:')
+# print(f'Mean average daily temperature: {round(average(avg_temps), 1)} F')
+# print(f'Mean relative humidity: {round(average(mean_humids), 1)}%')
+# print(f'Mean daily wind speed: {round(average(mean_winds), 2): .2f} mph')
+# print(f'Percentage of days with precipitation: {round(((len(precip_yes) / len(precip_tot)) * 100), 1)}%')
+
+
 weather.close()
